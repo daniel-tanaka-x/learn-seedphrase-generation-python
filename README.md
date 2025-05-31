@@ -1,29 +1,40 @@
-# learn-seedphrase-generation-python
+# 🌱 learn-seedphrase-generation-python
 
-Google Colabで実行してください。
-
-https://colab.google/
-
-
-これらのコマンドを先に実行してください。
-
-!pip install mnemonic
-
-!pip install pycryptodome
-
-!pip install bip_utils
-
-!pip install base58
-
-!pip install ecdsa
-
-
-ここからenglish.txtをダウンロードしてGoogle Colabのフォルダにアップロード
-
-https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt
-
-次にgenerate_seed.pyをGoogle Colabにコピーペーストして実行してください。
-
-エントロピーは自分でダイスロールして表を1、裏を0として128回入力しても良いですが、よければこちらのエントロピーをどうぞ。
+🔐 **Google Colab でシードフレーズを生成してみよう！**
 
 00011010110100001011000100010101010100010000001110010001000010001111010110110100101000000100001100111000111101101110010101100010
+
+---
+
+## 🔧 ステップ①：必要なライブラリをインストール
+
+以下のセルを実行して必要なライブラリをインストールしてください。
+
+```python
+!pip install mnemonic
+!pip install pycryptodome
+!pip install bip_utils
+!pip install base58
+!pip install ecdsa
+```
+
+## 🔧 ステップ②：english.txt をダウンロード＆アップロード
+
+以下のリンクから english.txt をダウンロードしてください。
+🔗 https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt
+
+Colab 左側「ファイル」タブ → 「ファイルをアップロード」でアップロードしてください。
+
+## 🖋️ ステップ③：エントロピー入力＆シード生成コード
+
+seed_generation.pyをGoogle Colabにペーストして実行してください。
+
+## 🎲 ステップ④：サンプルエントロピー（必要ならコピペ）
+
+コイントスでエントロピーを用意してください。表を1、裏を0として128回実行する必要があります。
+もし、コイントスする時間がなければ以下の128回分のコイントスの結果を利用できます。
+
+```python
+00011010110100001011000100010101010100010000001110010001000010001111010110110100101000000100001100111000111101101110010101100010
+```
+
