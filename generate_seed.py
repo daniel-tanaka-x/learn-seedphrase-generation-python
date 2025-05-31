@@ -79,13 +79,10 @@ print(f"🌿 チェーンコード（c_master）: {c_master.hex()}")
 print(f"🧩 フィンガープリント: {root_fp}")
 
 # === BIP32ルート拡張鍵 ===
-print("\n🔑 マスター秘密鍵とチェーンコードからBIP32ルート拡張鍵 (xprv/xpub)生成")
+print("\n🔑 マスター秘密鍵とチェーンコードからBIP32ルート拡張鍵生成")
 xprv_data = bytes.fromhex("0488ADE4") + b'\x00' + b'\x00'*4 + struct.pack('>L',0) + c_master + b'\x00' + k_master
 xprv = base58.b58encode(xprv_data + hashlib.sha256(hashlib.sha256(xprv_data).digest()).digest()[:4]).decode()
-xpub_data = bytes.fromhex("0488B21E") + b'\x00' + b'\x00'*4 + struct.pack('>L',0) + c_master + pubkey_master
-xpub = base58.b58encode(xpub_data + hashlib.sha256(hashlib.sha256(xpub_data).digest()).digest()[:4]).decode()
 print(f"🔑 xprv（ルート）: {xprv}")
-print(f"🔑 xpub（ルート）: {xpub}")
 
 # === BIP44アドレス＆秘密鍵（圧縮WIF） ===
 print("\n📬 P2PKHアドレスと秘密鍵（圧縮WIF）: m/44'/0'/0'/0/i 生成")
