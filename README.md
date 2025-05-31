@@ -6,7 +6,9 @@
 
 ## 🔧 ステップ①：必要なライブラリをインストール
 
-以下のコマンドをコピーして Google Colab上の Notebook で実行して必要なライブラリをインストールしてください。
+以下のURLから Google Colab にアクセスして Notebook を開いて、下のコマンドをコピー＆ペースト・実行して必要なライブラリをインストールしてください。
+
+https://colab.google/
 
 ```python
 !pip install mnemonic
