@@ -98,12 +98,3 @@ for i in range(5):
     addr = pubkey_to_p2pkh(pubkey)
     wif = to_wif_compressed(k)
     print(f" - {i}: {addr}\n   🔐 秘密鍵（圧縮WIF）: {wif}")
-
-# === BIP84ルート拡張鍵 ===
-print("\n🔑 BIP84ルート拡張鍵 (zprv/zpub)生成")
-zprv_data = bytes.fromhex("04b2430c") + b'\x00' + b'\x00'*4 + struct.pack('>L',0) + c_master + b'\x00' + k_master
-zprv = base58.b58encode(zprv_data + hashlib.sha256(hashlib.sha256(zprv_data).digest()).digest()[:4]).decode()
-zpub_data = bytes.fromhex("04b24746") + b'\x00' + b'\x00'*4 + struct.pack('>L',0) + c_master + pubkey_master
-zpub = base58.b58encode(zpub_data + hashlib.sha256(hashlib.sha256(zpub_data).digest()).digest()[:4]).decode()
-print(f"🔑 zprv: {zprv}")
-print(f"🔑 zpub: {zpub}")
