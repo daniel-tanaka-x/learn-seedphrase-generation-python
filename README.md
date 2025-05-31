@@ -1,5 +1,9 @@
 # learn-seedphrase-generation-python
 
+Google Colabで実行してください。
+
+https://colab.google/
+
 
 これらのコマンドを先に実行してください。
 
