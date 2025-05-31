@@ -25,7 +25,7 @@ Google Colab上の Notebook の 左側「ファイル」タブ → 「ファイ�
 
 ## 🖋️ ステップ③：エントロピー入力＆シード生成コード
 
-seed_generation.py を Google Colabにペーストして実行してください。
+generation_seed.py を Google Colab の Notebook にペーストして実行してください。
 
 ## 🎲 ステップ④：サンプルエントロピー（必要ならコピペ）
 
