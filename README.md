@@ -19,6 +19,7 @@
 ## 🔧 ステップ②：english.txt をダウンロード＆アップロード
 
 以下のリンクから english.txt をダウンロードしてください。
+
 🔗 https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt
 
 Google Colab上の Notebook の 左側「ファイル」タブ → 「ファイルをアップロード」でアップロードしてください。
@@ -30,6 +31,7 @@ generation_seed.py を Google Colab の Notebook にペーストして実行し�
 ## 🎲 ステップ④：サンプルエントロピー（必要ならコピペ）
 
 コイントスでエントロピーを用意してください。表を1、裏を0 として 128回実行する必要があります。
+
 もし、コイントスする時間がなければ以下の 128回分のコイントスの結果を利用できます。
 
 ```python
